@@ -1,25 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
+import Routes from './routes';
+
+import './global.css';
+
+// Propriedades: atributos repassados para componentes (mesma sintaxe dos atributos em HTML)
+// Estado: Informação que vai ser mantida pelo Componente
+//      Se para armazenar essa informação, for utilizado uma variável, qualquer mudança que 
+//      ocorrer nela não será refletido na página, pois o componente não renderiza toda vez 
+//      ela muda. Diferentemente do estado, em que essa renderização acontece toda vez em 
+//      que ele é alterado.
+// Nao é permitido alterar o valor do estado de maneira direta, isso é feito atraves do SetState
+// useState => array [variavelQArmazenaOValor, funcaoDeAtualizacao]
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes/>
   );
 }
 
